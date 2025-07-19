@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "workflows": [
+    {
+      "module": "5_rag_chatbot",
+      "workflow_sandbox_id": "d1371785-dd4d-443e-8c21-e27a073c7697",
+      "ignore": "sandbox.py",
+      "deployments": [],
+      "container_image_name": null,
+      "container_image_tag": null,
+      "workspace": "default",
+      "target_directory": null
+    },
+    {
+      "module": "karma_pharma",
+      "workflow_sandbox_id": "dd5e7e46-bd4e-4d30-99e4-e68edeb906a2",
+      "ignore": "sandbox.py",
+      "deployments": [],
+      "container_image_name": "python-workflow-runtime",
+      "container_image_tag": "latest",
+      "workspace": "default",
+      "target_directory": null
+    }
+  ],
+  "workspaces": []
+}
