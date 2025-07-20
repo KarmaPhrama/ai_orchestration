@@ -16,7 +16,7 @@
       "workflow_sandbox_id": "dd5e7e46-bd4e-4d30-99e4-e68edeb906a2",
       "ignore": "sandbox.py",
       "deployments": [],
-      "container_image_name": "python-workflow-runtime",
+      "container_image_name": "karmapharma",
       "container_image_tag": "latest",
       "workspace": "default",
       "target_directory": null

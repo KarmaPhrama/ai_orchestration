@@ -1,5 +1,7 @@
-from typing import List
 from .context_collector import context_collector
+from .email_getter import email_getter
+from .post_linkedin import post_linkedin
+from typing import List
 
 from vellum import (
     ChatMessage,
@@ -15,13 +17,22 @@ from ...inputs import Inputs
 
 
 class ToolCallingNode(BaseToolCallingNode):
-    ml_model = "gemini-1.5-flash"
+    ml_model = "gpt-4.1-mini"
     prompt_inputs = {
         "chat_history": Inputs.chat_history,
     }
     blocks = [
         ChatMessagePromptBlock(
-            chat_role="SYSTEM", blocks=[RichTextPromptBlock(blocks=[PlainTextPromptBlock(text="""Talk to the user""")])]
+            chat_role="SYSTEM",
+            blocks=[
+                RichTextPromptBlock(
+                    blocks=[
+                        PlainTextPromptBlock(
+                            text="""AI-powered marketing agent that collects product information, uploads media to Vellum, stores data in MongoDB, and provides strategic marketing recommendations for product promotion and campaign optimization."""
+                        )
+                    ]
+                )
+            ],
         ),
         VariablePromptBlock(input_variable="chat_history"),
     ]
@@ -40,7 +51,7 @@ class ToolCallingNode(BaseToolCallingNode):
         "stream_enabled": True,
     }
     max_prompt_iterations = 5
-    functions = [context_collector]
+    functions = [context_collector, email_getter, post_linkedin]
 
     class Outputs(BaseToolCallingNode.Outputs):
         text: str

@@ -1,2 +1,0 @@
-vellum-ai
-pymongo
