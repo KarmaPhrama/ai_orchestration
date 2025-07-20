@@ -24,7 +24,7 @@ class WorkflowDisplay(BaseWorkflowDisplay[Workflow]):
         entrypoint_node_source_handle_id=UUID("afd7816c-ddc4-4e89-8e3c-0c0bd393a8df"),
         entrypoint_node_display=NodeDisplayData(position=NodeDisplayPosition(x=1545, y=330), width=124, height=48),
         display_data=WorkflowDisplayData(
-            viewport=WorkflowDisplayDataViewport(x=-853.578209717324, y=243.5335803432779, zoom=0.6000947518029163)
+            viewport=WorkflowDisplayDataViewport(x=-907.578209717324, y=234.63482844081625, zoom=0.6000947518029163)
         ),
     )
     inputs_display = {

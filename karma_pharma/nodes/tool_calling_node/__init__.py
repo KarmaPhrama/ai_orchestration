@@ -1,5 +1,5 @@
-from .context_collector import context_collector
 from typing import List
+from .context_collector import context_collector
 
 from vellum import (
     ChatMessage,
